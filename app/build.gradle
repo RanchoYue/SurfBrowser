@@ -1,6 +1,4 @@
-plugins {
-    id 'com.android.application'
-}
+apply plugin: 'com.android.application'
 
 def keystoreProperties = new Properties()
 def signingConfigFile = file('signing_config.properties')
@@ -17,17 +15,16 @@ android {
         }
     }
 
-    namespace 'com.yue.surfbrowser'
-    compileSdk 33
+    compileSdkVersion 32
+    buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "com.yue.surfbrowser"
-        minSdk 23
-        targetSdk 33
+        minSdkVersion 23
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
     }
-
 
     buildTypes {
         debug {
@@ -40,6 +37,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -47,7 +45,7 @@ android {
 }
 
 dependencies {
-    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'com.squareup.okhttp3:okhttp:4.9.1'
     implementation 'com.blankj:utilcodex:1.31.1'
