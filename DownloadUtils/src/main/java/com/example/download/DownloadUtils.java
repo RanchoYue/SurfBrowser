@@ -9,8 +9,8 @@ import java.net.URL;
 public class DownloadUtils {
 
     public static void main(String[] args) {
-        String fileUrl = "https://ucan.25pp.com/Wandoujia_web_seo_baidu_homepage.apk";
-        String destinationPath = "D:\\download\\demo.apk";
+        String fileUrl = "http://localhost";
+        String destinationPath = "D:\\download\\demo.txt";
 
         try {
             downloadFile(fileUrl, destinationPath);

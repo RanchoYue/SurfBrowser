@@ -3,6 +3,8 @@ package com.yue.surfbrowser;
 import static com.yue.surfbrowser.Utils.TAG;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -14,6 +16,11 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 
 public class Html5Activity extends Activity {
+
+    public static void start(Context context) {
+        Intent starter = new Intent(context, Html5Activity.class);
+        context.startActivity(starter);
+    }
 
     private String mUrl;
     private ProgressBar progressBar;
